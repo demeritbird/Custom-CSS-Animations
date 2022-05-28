@@ -7,7 +7,6 @@ body {
     display: flex;
     flex-direction: column;
 
-    height: 100vh;
     display: flex;
     align-items: top;
 }
@@ -143,4 +142,81 @@ body {
     font-weight: 900;
     letter-spacing: 10px;
     border: 7px solid #e1332d;
+}
+
+.hoverthree {
+    text-decoration: none;
+    color: #262626;
+    font-family: sans-serif;
+    font-size: 45px;
+    border: 5px solid #262626;
+    padding: 40px 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hoverthree:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #fff200;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    transform-origin: bottom left;
+    transform: rotate(-90deg);
+    transition: transform 1s;
+}
+
+.hoverthree:before {
+    content: 'YEAH!';
+    color: white;
+    background-color: #f44336;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateY(-100%);
+    transition: all 0.5s;
+}
+
+.hoverthree:hover:before {
+    transform: translateY(0);
+}
+
+.hoverGlow {
+    text-decoration: none;
+    color: Black;
+    font-family: sans-serif;
+    font-size: 40px;
+    border: 3px solid black;
+    padding: 40px 80px;
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+
+.hoverGlow:hover {
+    background-color: #f44336;
+}
+
+.hoverGlow:before {
+    content: '';
+    background-color: white;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    transform: translateX(-100%) rotate(45deg);
+    transition: all 0.3s;
+}
+
+.hoverGlow:hover:before {
+    transform: translateX(100%) rotate(45deg);
 }
