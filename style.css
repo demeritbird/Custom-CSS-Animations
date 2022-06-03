@@ -653,3 +653,271 @@ body {
 .slideBtn:hover {
     color: #222;
 }
+
+.borderSwap {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-family: verdana;
+    letter-spacing: 3px;
+    height: 60px;
+    width: 200px;
+    line-height: 60px;
+    text-align: center;
+    color: #fdc518;
+    position: relative;
+}
+
+.borderSwap:before {
+    content: '';
+    position: absolute;
+    height: 90px;
+    width: 200px;
+    top: -15px;
+    left: 0;
+    border-left: 2px solid red;
+    border-right: 2px solid #fdc518;
+    transition: all 01s;
+}
+
+.borderSwap:after {
+    content: '';
+    position: absolute;
+    height: 60px;
+    width: 230px;
+    top: 0;
+    left: -15px;
+    border-top: 2px solid red;
+    border-bottom: 2px solid #fdc518;
+    transition: all 1s;
+}
+
+.borderSwap:hover:before {
+    transform: rotateY(180deg);
+}
+
+.borderSwap:hover:after {
+    transform: rotateX(180deg);
+}
+
+.cornerWap {
+    border: none;
+    padding: 12px 40px;
+    background-color: #c47135;
+    color: white;
+    font-family: 'BenchNine';
+    font-size: 22px;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+}
+
+.cornerWap:before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: -5px;
+    left: -5px;
+    border-top: 2px solid #c47135;
+    border-left: 2px solid #c47135;
+    transition: all 0.25s;
+}
+
+.cornerWap:hover:before,
+.cornerWap:hover:after {
+    height: 100%;
+    width: 100%;
+}
+
+.cornerWap:after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    bottom: -5px;
+    right: -5px;
+    border-bottom: 2px solid #c47135;
+    border-right: 2px solid #c47135;
+    transition: all 0.25s;
+}
+
+.firstLetter {
+    text-decoration: none;
+    width: 160px;
+    height: 60px;
+    color: black;
+    border: 2px solid black;
+    text-align: center;
+    line-height: 60px;
+    font-size: 25px;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.firstLetter:hover {
+    color: white;
+}
+
+.firstLetter:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.8s;
+}
+
+.firstLetter:hover:before {
+    opacity: 1;
+    transform: rotate(15deg);
+}
+
+.firstLetter .bigR {
+    color: transparent;
+    position: relative;
+}
+
+.firstLetter .bigR:before {
+    content: 'R';
+    position: absolute;
+    color: black;
+    transition: all 0.2s;
+}
+
+.firstLetter:hover .bigR:before {
+    color: black;
+    font-size: 80px;
+    transform: translate(-65%, -10%) rotate(360deg);
+}
+
+.cornerWap2 {
+    background-color: transparent;
+    border: none;
+    position: relative;
+    width: 400px;
+    height: 120px;
+    text-transform: uppercase;
+    line-height: 120px;
+    text-align: center;
+    color: black;
+    font-size: 45px;
+    letter-spacing: 15px;
+    overflow: hidden;
+}
+
+.cornerWap2:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    transition: all 0.5s;
+}
+
+.cornerWap2:hover:before {
+    left: 0;
+}
+
+.cornerWap2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    transition: all 0.5s;
+}
+
+.cornerWap2:hover:after {
+    right: 0;
+}
+
+.gap:before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background-color: black;
+    transition: all 0.5s;
+}
+
+.cornerWap2:hover .gap:before {
+    top: 0;
+}
+
+.gap:after {
+    content: '';
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background-color: black;
+    transition: all 0.5s;
+}
+
+.cornerWap2:hover .gap:after {
+    bottom: 0;
+}
+
+.wavy {
+    text-decoration: none;
+    padding: 15px 30px;
+    color: #00aeff;
+    font-size: 18px;
+    letter-spacing: 3px;
+    border: 2px solid #00aeff;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.wavy:hover {
+    color: white;
+}
+
+.wave {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: calc(100% + 22px);
+    background-color: #00aeff;
+    transition: all 1s;
+    z-index: -1;
+}
+
+.wavy:hover .wave {
+    top: 0;
+}
+
+.wave:before {
+    content: '';
+    position: absolute;
+    top: -22px;
+    left: 0;
+    width: 100%;
+    height: 22px;
+    background: url(wave.png);
+    animation: wavyy 0.5s linear infinite;
+}
+
+@keyframes wavyy {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 118px;
+    }
+}
