@@ -5,12 +5,17 @@
 }
 body {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 
-    display: flex;
     align-items: top;
 }
 
+/* BUTTONS ANIMATIONS */
+
+.buttonnnnn {
+    display: flex;
+    flex-direction: column;
+}
 .hover {
     text-decoration: none;
     color: #262626;
