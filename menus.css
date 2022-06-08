@@ -1,0 +1,118 @@
+.menus {
+    display: flex;
+    flex-direction: column;
+
+    font-family: 'Lato', sans-serif;
+}
+
+.menuFirst {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menuFirst .listFirst {
+    list-style: none;
+}
+
+.menuFirst .listFirst .linkFirst {
+    text-decoration: none;
+    color: #3d3d3d;
+    font-size: 22px;
+    display: block;
+    padding: 10px 15px;
+    position: relative;
+}
+
+.menuFirst .listFirst .linkFirst:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #3d3d3d;
+    transform: scaleX(0);
+    transition: all 0.5s;
+    transform-origin: left;
+}
+
+.menuFirst .listFirst .linkFirst:hover:before,
+.menuFirst .listFirst .linkFirst:hover:after {
+    transform: scaleX(1);
+}
+
+.menuFirst .listFirst .linkFirst:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #3d3d3d;
+    transform: scaleX(0);
+    transition: all 0.5s;
+    transform-origin: right;
+}
+
+.menuSecond {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+}
+
+.menuSecond .listSecond .linkSecond {
+    color: #272727;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    margin: 0px 10px;
+    position: relative;
+    transition: all 0.5s;
+}
+
+.linkSecond:hover {
+    background-color: #e91e63;
+    color: white;
+}
+
+.linkSecond:before {
+    content: '';
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    width: 12px;
+    height: 12px;
+    border: 3px solid #e91e63;
+    border-width: 0 0 3px 3px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.linkSecond:hover:before {
+    opacity: 1;
+    bottom: -8px;
+    left: -8px;
+}
+
+.linkSecond:after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 12px;
+    height: 12px;
+    border: 3px solid #e91e63;
+    border-width: 3px 3px 0 0;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.linkSecond:hover:after {
+    opacity: 1;
+    top: -8px;
+    right: -8px;
+}
