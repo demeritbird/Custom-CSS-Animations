@@ -1,0 +1,106 @@
+/* .clippaths {
+    display: flex;
+    flex-direction: column;
+} */
+.mainOne {
+    position: relative;
+    width: 800px;
+}
+
+.h1clipOne {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 220px;
+    text-transform: uppercase;
+    background-color: #c8d6e5;
+}
+
+.h1clipOne:nth-child(2) {
+    color: white;
+    transition: 0.5s;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0% 100%);
+}
+
+.h1clipOne:nth-child(2):hover {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.h1clipOne:nth-child(1):hover ~ .h1clipOne {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+/*---*/
+
+.cardClipTwo {
+    position: relative;
+    width: 335px;
+    height: 500px;
+}
+
+.imgClipTwo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+    clip-path: circle(70.7% at 50% 50%);
+}
+
+.innerImg {
+    width: 100%;
+}
+
+.cardClipTwo:hover .imgClipTwo {
+    clip-path: circle(18.2% at 50% 38%);
+}
+
+.contentClipTwo {
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    text-align: center;
+}
+
+.h2ClipTwo {
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.pClipTwo {
+    margin-bottom: 25px;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+.aClipTwo {
+    display: inline-block;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    text-transform: capitalize;
+}
+
+.h2ClipTwo,
+.pClipTwo,
+.aClipTwo {
+    opacity: 0;
+    transition: 0.3s;
+    transform: translateY(20px);
+}
+
+.cardClipTwo:hover h2,
+.cardClipTwo:hover p,
+.cardClipTwo:hover a {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.5s;
+}
